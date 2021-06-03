@@ -9,7 +9,7 @@ if (process.env.NODE_ENV === 'production') {
 const PORT = process.env.PORT || 5000
 
 server.get('/api', (req, res) => {
-    res.json({message: `ROCKS`})
+    res.json({message: `${COHORT} sucks lmao`})
 })
 
 server.use((req, res) => {
@@ -17,5 +17,5 @@ server.use((req, res) => {
 })
 
 server.listen(PORT, () => {
-    console.log(`listening on ${PORT}`)
+    console.log(`listening on ${PORT} `)
 })
