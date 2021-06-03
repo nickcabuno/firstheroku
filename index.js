@@ -9,7 +9,11 @@ if (process.env.NODE_ENV === 'production') {
 const PORT = process.env.PORT || 5000
 
 server.get('/api', (req, res) => {
-    res.json({message: `${process.env.COHORT} ROCKS`})
+    res.json({message: `ROCKS`})
+})
+
+server.use((req, res) => {
+    res.status(404).json({message: "idk bruh"})
 })
 
 server.listen(PORT, () => {
